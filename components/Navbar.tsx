@@ -57,7 +57,7 @@ export const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { name: 'Battles', href: '/#battles' },
+    { name: 'Battles', href: '/battles' },
     { name: 'About', href: '/#about' },
     { name: 'Mission', href: '/#mission' },
     { name: 'Locations', href: '/#locations' },
@@ -95,7 +95,7 @@ export const Navbar: React.FC = () => {
 
         {/* CTA */}
         <div className="hidden md:block">
-            <Button size="sm" className="rounded-sm">Book a Match</Button>
+            <Button size="sm" to="/battles" className="rounded-sm">Book a Match</Button>
         </div>
 
         {/* Mobile Toggle */}
@@ -123,7 +123,7 @@ export const Navbar: React.FC = () => {
               {link.name}
             </Link>
           ))}
-          <Button className="w-full mt-4" size="lg">Book Now</Button>
+          <Button className="w-full mt-4" size="lg" to="/battles">Book Now</Button>
         </div>
       </div>
     </nav>

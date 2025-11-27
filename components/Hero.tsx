@@ -33,7 +33,7 @@ export const Hero: React.FC = () => {
         </p>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 animate-fade-in-up [animation-delay:600ms]">
-          <Button size="lg" withArrow className="rounded-sm text-black hover:text-brand-black">Play Now</Button>
+          <Button size="lg" withArrow to="/battles" className="rounded-sm text-black hover:text-brand-black">Play Now</Button>
         </div>
       </div>
 
