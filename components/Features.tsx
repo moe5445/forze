@@ -40,7 +40,7 @@ export const Features: React.FC = () => {
           </Reveal>
 
           <Reveal delay={200}>
-            <span className="text-brand-green font-display font-bold uppercase tracking-widest text-sm mb-4 block">The Main Event</span>
+            <span className="text-brand-green font-display font-bold uppercase tracking-widest text-2xl mb-4 block">The Main Event</span>
             <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 uppercase leading-none">
               Forze <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-white/50">Battles</span>
             </h2>

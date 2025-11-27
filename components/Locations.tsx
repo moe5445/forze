@@ -58,7 +58,7 @@ export const Locations: React.FC = () => {
         <Reveal>
             <div className="text-center mb-16">
                 {/* Unified Section Header - Maintained Blue for section identity but matched typography structure */}
-                <span className="text-brand-blue font-display font-bold uppercase tracking-widest text-sm mb-4 block">
+                <span className="text-brand-green font-display font-bold uppercase tracking-widest text-2xl mb-4 block">
                     Where We Play
                 </span>
                 <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6 uppercase">

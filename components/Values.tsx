@@ -52,7 +52,7 @@ export const Values: React.FC = () => {
         <Reveal>
           <div className="text-center max-w-3xl mx-auto mb-16">
             {/* Unified Section Header */}
-            <span className="text-brand-green font-display font-bold uppercase tracking-widest text-sm mb-4 block">
+            <span className="text-brand-green font-display font-bold uppercase tracking-widest text-2xl mb-4 block">
                 Our Ethos
             </span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white uppercase">Driven By Values</h2>

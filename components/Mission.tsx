@@ -16,7 +16,7 @@ export const Mission: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10 text-center">
         <Reveal>
           {/* Unified Section Header */}
-          <span className="text-brand-green font-display font-bold uppercase tracking-widest text-sm mb-4 block">
+          <span className="text-brand-green font-display font-bold uppercase tracking-widest text-2xl mb-4 block">
             Our Purpose
           </span>
           
@@ -38,11 +38,8 @@ export const Mission: React.FC = () => {
             We create an inclusive space and form a community where anyone can book in, play the sport they love, socialise & relieve their stress on the pitch.
           </p>
 
-          <Button 
-            className="bg-white text-brand-black hover:bg-brand-green hover:text-white border-none shadow-[0_0_30px_rgba(255,255,255,0.1)]"
-            withArrow
-          >
-            Play now
+          <Button size="lg" withArrow className="rounded-sm text-black hover:text-brand-black">
+            Play Now
           </Button>
         </Reveal>
       </div>
