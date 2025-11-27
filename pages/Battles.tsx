@@ -66,7 +66,7 @@ export const Battles: React.FC = () => {
           {Object.entries(groupedMatches).map(([date, dayMatches]) => (
             <div key={date} className="animate-fade-in-up">
               {/* Sticky Date Header */}
-              <div className="sticky top-24 z-20 bg-brand-black/90 backdrop-blur-xl border-y border-white/5 py-3 mb-6 flex items-center gap-3">
+              <div className="border-y border-white/5 py-3 mb-6 flex items-center gap-3">
                 <Calendar className="w-4 h-4 text-brand-orange" />
                 <h3 className="text-white font-display font-bold text-lg uppercase tracking-wider">{date}</h3>
                 <div className="h-px flex-grow bg-gradient-to-r from-white/10 to-transparent" />

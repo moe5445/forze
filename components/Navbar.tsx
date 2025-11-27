@@ -70,11 +70,11 @@ export const Navbar: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 py-4">
       <div className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-500 ease-out rounded-full ${isScrolled ? 'bg-brand-black/90 backdrop-blur-xl py-3 px-8' : 'bg-transparent py-3'}`}>
-
+ 
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-brand-green flex items-center justify-center rounded-sm group-hover:bg-white transition-colors">
-                <Trophy className="text-white group-hover:text-brand-green w-5 h-5" />
+        <Link to="/" className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-brand-green flex items-center justify-center rounded-sm">
+                <Trophy className="text-white w-5 h-5" />
             </div>
             <div className="flex flex-col">
                 <span className="font-display font-bold text-2xl tracking-tighter leading-none text-white">FORZE</span>

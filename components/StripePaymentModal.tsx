@@ -134,6 +134,7 @@ export const StripePaymentModal: React.FC<StripePaymentModalProps> = ({
             <button
               onClick={handleClose}
               disabled={isProcessing}
+              title="Close payment modal"
               className="w-8 h-8 rounded-full hover:bg-gray-100 flex items-center justify-center transition-colors disabled:opacity-50"
             >
               <X className="w-5 h-5 text-gray-400" />

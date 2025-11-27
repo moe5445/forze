@@ -160,9 +160,9 @@ export const Locations: React.FC = () => {
                                 href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(activeLocation.mapQuery)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex-1 md:flex-none py-3 px-8 bg-brand-green text-white font-display uppercase tracking-wider text-sm hover:bg-white hover:text-brand-green transition-colors flex items-center justify-center gap-2 rounded-sm shadow-[0_0_20px_rgba(0,166,76,0.3)] group"
+                                className="flex-1 md:flex-none py-3 px-8 bg-brand-green text-white font-display uppercase tracking-wider text-sm flex items-center justify-center gap-2 rounded-sm"
                             >
-                                Get Directions <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                Get Directions <ArrowRight className="w-4 h-4" />
                             </a>
                         </div>
                     </div>
