@@ -50,9 +50,9 @@ export const Locations: React.FC = () => {
   };
 
   return (
-    <section id="locations" className="py-24 bg-brand-paper relative overflow-hidden">
-        {/* Decorative background elements */}
-        <div className="hidden md:block absolute top-0 right-0 w-[600px] h-[600px] bg-brand-blue/5 rounded-full blur-[100px] pointer-events-none" />
+    <section id="locations" className="py-24 bg-[#0F0F0F] relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
         
       <div className="container mx-auto px-6 relative z-10">
         <Reveal>
