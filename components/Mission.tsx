@@ -38,7 +38,7 @@ export const Mission: React.FC = () => {
             We create an inclusive space and form a community where anyone can book in, play the sport they love, socialise & relieve their stress on the pitch.
           </p>
 
-          <Button size="lg" withArrow className="rounded-sm text-black hover:text-brand-black">
+          <Button size="lg" withArrow className="rounded-sm text-black hover:text-brand-black" to="/battles">
             Play Now
           </Button>
         </Reveal>

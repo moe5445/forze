@@ -50,8 +50,8 @@ export const Features: React.FC = () => {
               We are all about having a great time socialising, building a community and staying active playing the beautiful game.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="rounded-sm">Find a Match </Button>
-                <Button variant="outline" className="rounded-sm">View Schedule</Button>
+                <Button className="rounded-sm" to="/battles">Find a Match </Button>
+                <Button variant="outline" className="rounded-sm" to="/battles">View Schedule</Button>
             </div>
           </Reveal>
         </div>

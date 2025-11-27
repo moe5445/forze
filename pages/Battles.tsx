@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Calendar, MapPin, ChevronRight, Lock } from 'lucide-react';
 import { matches } from '../data/battles';
@@ -7,6 +7,11 @@ import { Match } from '../types';
 export const Battles: React.FC = () => {
   const navigate = useNavigate();
   const [filter, setFilter] = useState<'All' | 'Olympia' | 'PEC' | 'LORAG'>('All');
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const filteredMatches = matches.filter(m => filter === 'All' || m.location === filter);
 
