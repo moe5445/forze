@@ -53,7 +53,7 @@ export const Navbar: React.FC = () => {
 
         {/* CTA */}
         <div className="hidden md:block">
-            <Button size="sm">Book a Match</Button>
+            <Button size="sm" className="rounded-sm">Book a Match</Button>
         </div>
 
         {/* Mobile Toggle */}

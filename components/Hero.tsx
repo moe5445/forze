@@ -23,7 +23,7 @@ export const Hero: React.FC = () => {
 
         <h1 className="font-display font-bold text-6xl md:text-8xl lg:text-9xl tracking-tighter text-white mb-6 leading-[0.9] uppercase animate-fade-in-up [animation-delay:200ms]">
           Welcome To <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green via-white to-brand-green">Forze</span>
+          <span className="text-white">Forze</span>
         </h1>
 
         <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up [animation-delay:400ms]">
@@ -33,7 +33,7 @@ export const Hero: React.FC = () => {
         </p>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 animate-fade-in-up [animation-delay:600ms]">
-          <Button size="lg" withArrow>Play Now</Button>
+          <Button size="lg" withArrow className="rounded-sm">Play Now</Button>
         </div>
       </div>
 
