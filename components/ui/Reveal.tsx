@@ -14,6 +14,7 @@ export const Reveal: React.FC<RevealProps> = ({ children, delay = 0, className =
     opacity: isVisible ? 1 : 0,
     transform: isVisible ? 'translateY(0)' : 'translateY(40px)',
     transition: `all 0.8s cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
+    willChange: 'transform, opacity',
   };
 
   return (

@@ -7,8 +7,8 @@ export const Mission: React.FC = () => {
     <section id="mission" className="relative py-32 bg-[#0a0a0a] overflow-hidden">
       {/* Background Ambience */}
       <div className="absolute inset-0">
-         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-green/10 rounded-full blur-[120px] pointer-events-none" />
-         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-brand-blue/10 rounded-full blur-[120px] pointer-events-none" />
+         <div className="hidden md:block absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-green/10 rounded-full blur-[120px] pointer-events-none" />
+         <div className="hidden md:block absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-brand-blue/10 rounded-full blur-[120px] pointer-events-none" />
          {/* Subtle Grid Texture */}
          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
       </div>
