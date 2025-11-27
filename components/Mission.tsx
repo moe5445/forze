@@ -42,7 +42,7 @@ export const Mission: React.FC = () => {
             className="bg-white text-brand-black hover:bg-brand-green hover:text-white border-none shadow-[0_0_30px_rgba(255,255,255,0.1)]"
             withArrow
           >
-            Join The Mission
+            Play now
           </Button>
         </Reveal>
       </div>

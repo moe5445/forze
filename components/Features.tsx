@@ -24,7 +24,7 @@ export const Features: React.FC = () => {
                 <img 
                     src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=2586&auto=format&fit=crop" 
                     alt="Football Action" 
-                    className={`rounded-lg shadow-2xl transition-all duration-1000 ease-out w-full object-cover aspect-[4/3] ${imgVisible1 ? 'grayscale-0' : 'grayscale'}`}
+                    className={`rounded-lg shadow-2xl transition-all duration-1000 ease-out w-full object-cover aspect-square ${imgVisible1 ? 'grayscale-0' : 'grayscale'}`}
                 />
                 
                 {/* Floating Badge */}
