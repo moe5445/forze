@@ -10,7 +10,7 @@ export const Features: React.FC = () => {
   const { ref: imgRef2, isVisible: imgVisible2 } = useScrollReveal(0.3);
 
   return (
-    <section id="battles" className="py-24 bg-brand-black relative">
+    <section id="battles" className="py-24 bg-brand-black relative overflow-hidden">
         {/* Glow Effects */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-green/5 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-orange/5 rounded-full blur-[120px] pointer-events-none" />

@@ -22,7 +22,7 @@ const Home = () => (
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-brand-black text-white font-sans selection:bg-brand-green selection:text-white">
+      <div className="min-h-screen bg-brand-black text-white font-sans selection:bg-brand-green selection:text-white overflow-x-hidden">
         <Navbar />
         <main>
           <Routes>
