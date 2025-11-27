@@ -64,10 +64,13 @@ export const Navbar: React.FC = () => {
     { name: 'Rulebook', href: '/rulebook' },
   ];
 
+  // Check if we're on a battle-related page
+  const isBattlePage = location.pathname.startsWith('/battle');
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 py-4">
       <div className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-500 ease-out rounded-full ${isScrolled ? 'bg-brand-black/90 backdrop-blur-xl py-3 px-8' : 'bg-transparent py-3'}`}>
-        
+
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 bg-brand-green flex items-center justify-center rounded-sm group-hover:bg-white transition-colors">
@@ -82,8 +85,8 @@ export const Navbar: React.FC = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
+            <Link
+              key={link.name}
               to={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
               className="text-sm font-medium text-white/70 hover:text-brand-green transition-colors uppercase tracking-wide"
@@ -93,13 +96,16 @@ export const Navbar: React.FC = () => {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="hidden md:block">
-            <Button size="sm" to="/battles" className="rounded-sm">Book a Match</Button>
-        </div>
+        {/* CTA - Hide on battle pages */}
+        {!isBattlePage && (
+          <div className="hidden md:block">
+              <Button size="sm" to="/battles" className="rounded-sm">Book a Match</Button>
+          </div>
+        )}
 
         {/* Mobile Toggle */}
-        <button 
+        <button
+          type="button"
           className="md:hidden text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
@@ -111,9 +117,9 @@ export const Navbar: React.FC = () => {
       <div className={`fixed inset-0 bg-brand-black z-40 transition-transform duration-300 transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden pt-24 px-6`}>
         <div className="flex flex-col gap-6">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
-              to={link.href} 
+            <Link
+              key={link.name}
+              to={link.href}
               onClick={(e) => {
                 handleNavClick(e, link.href);
                 setIsMobileMenuOpen(false);
@@ -123,7 +129,9 @@ export const Navbar: React.FC = () => {
               {link.name}
             </Link>
           ))}
-          <Button className="w-full mt-4" size="lg" to="/battles">Book Now</Button>
+          {!isBattlePage && (
+            <Button className="w-full mt-4" size="lg" to="/battles">Book Now</Button>
+          )}
         </div>
       </div>
     </nav>

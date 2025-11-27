@@ -33,6 +33,7 @@ export const BattleBooking: React.FC = () => {
         <div className="text-center">
           <h2 className="text-2xl font-display font-bold text-white mb-4">Battle Not Found</h2>
           <button
+            type="button"
             onClick={() => navigate('/battles')}
             className="px-6 py-3 bg-brand-yellow text-brand-black font-bold rounded-xl hover:bg-brand-yellowHover transition-colors"
           >
@@ -110,6 +111,7 @@ export const BattleBooking: React.FC = () => {
         {/* Navigation & Header */}
         <div className="mb-12">
           <button
+            type="button"
             onClick={() => navigate('/battles')}
             className="flex items-center gap-2 text-white/50 hover:text-brand-green mb-8 transition-colors uppercase tracking-widest text-xs font-bold"
           >
