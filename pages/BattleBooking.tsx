@@ -144,6 +144,11 @@ export const BattleBooking: React.FC = () => {
         </div>
 
         {/* SQUAD SELECTION AREA */}
+        <div className="mb-8">
+          <h3 className="text-xl font-display font-bold text-white uppercase mb-2">Choose Your Team</h3>
+          <p className="text-white/50 text-sm">Click on a team below to select which squad you want to join, then enter your name and confirm your booking.</p>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-8 mb-12 relative">
 
           {/* VS Badge */}
