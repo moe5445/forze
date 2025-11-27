@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Trophy } from 'lucide-react';
 import { Button } from './ui/Button';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     let ticking = false;
@@ -21,6 +23,38 @@ export const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Handle hash scrolling after navigation
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Check if it's a hash link on the same page
+    if (href.startsWith('/#')) {
+      const hash = href.substring(1); // Remove leading /
+      const targetId = hash.substring(1); // Remove #
+      const element = document.getElementById(targetId);
+      
+      // If we're on the home page and element exists, scroll to it
+      if (location.pathname === '/' && element) {
+        e.preventDefault();
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      // If we're on a different page, navigate to home with hash
+      else if (location.pathname !== '/') {
+        e.preventDefault();
+        navigate('/' + hash);
+      }
+    }
+  };
 
   const navLinks = [
     { name: 'Battles', href: '/#battles' },
@@ -50,7 +84,8 @@ export const Navbar: React.FC = () => {
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
-              to={link.href} 
+              to={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="text-sm font-medium text-white/70 hover:text-brand-green transition-colors uppercase tracking-wide"
             >
               {link.name}
@@ -79,7 +114,10 @@ export const Navbar: React.FC = () => {
             <Link 
               key={link.name} 
               to={link.href} 
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={(e) => {
+                handleNavClick(e, link.href);
+                setIsMobileMenuOpen(false);
+              }}
               className="text-2xl font-display font-bold text-white hover:text-brand-green"
             >
               {link.name}
